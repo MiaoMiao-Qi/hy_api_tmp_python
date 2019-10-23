@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"count":0,"govCode":500000,"govName":"÷ÿ«Ï –","chassicNum":null,"carNum":null,"carType":null,"engineType":null,"structureNum":null,"lastCarDate":null,"lastCarDateStr":null,"lastLon":null,"lastLat":null,"lastLoction":null,"govCityName":null}]}

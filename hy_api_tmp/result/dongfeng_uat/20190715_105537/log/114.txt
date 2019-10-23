@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"id":"3a6f82c629b2492f9ba363e32deea57a","areaId":null,"elecFenceName":"zhouzhou02","stationName":null,"serviceCode":null,"province":null,"city":null,"creator":null,"creatDate":null,"coordinate":null,"dataSn":null,"radius":null,"delFlag":null,"electTypeName":null}]}

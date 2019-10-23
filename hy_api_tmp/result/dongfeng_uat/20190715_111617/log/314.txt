@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"tmId":79,"tmName":"Auto001","tmFactoryName":"≤‚ ‘","tmFactoryNum":"Test001","tmPublicNum":"BJ0001","tmLoctionModel":["5854","Galileo"],"tmCommuModel":["5861","LTE FDD"],"tmCarMatched":["5864","Œ£","5863","ªı","5862","øÕ"],"tmModelNum":"123456","tmNotes":"≤‚ ‘"}]}}

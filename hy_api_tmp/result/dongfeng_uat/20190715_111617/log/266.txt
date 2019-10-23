@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":284,"name":"auto","code":284,"createAccount":"zhouzhou","roleType":"·şÎñÕ¾","createTime":"2019-07-15 11:21:10","updateTime":null}]}}

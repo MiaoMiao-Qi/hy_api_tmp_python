@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":"3a6f82c629b2492f9ba363e32deea57a","elecFenceName":"zhouzhou02","account":"zhouzhou","createTime":"2019-07-10 18:27:16","carNumber":25,"vids":12,"areaId":4517,"stationName":"广州市扬华物流有限公司","serviceCode":"1907665","province":"河北","city":"保定","electTypeName":"修理厂","coordinate":"115487111,38749064"}]}}

@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"cid":120897,"businessName":"z-∆Û“µ","addressCode":null,"linkTelpone":null,"addressCommon":null,"linkPerson":null,"businessCode":"66666666666666","fax":null,"common":null,"certificateCode":"","vehicleLicCode":"","roadTransLicCode":"","organizationCode":null,"addressName":null,"customerType":null,"ctype":1}}
