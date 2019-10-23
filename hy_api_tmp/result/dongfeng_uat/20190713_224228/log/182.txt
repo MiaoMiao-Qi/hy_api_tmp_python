@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"ACC状态:未检测到数据 , CAN状态:未检测到数据 , GPS状态未检测到数据","data":{"accData":{"acc":"未检测到数据","flag":2,"acctime":null},"canData":{"can":"未检测到数据","flag":2,"cantime":null},"terminalData":{"flag":2,"ter":"未检测到数据","tertime":null,"lat":null,"lon":null},"gpsData":{"flag":2,"gps":"未检测到数据","gpstime":null,"location":null,"lat":null,"lon":null}}}

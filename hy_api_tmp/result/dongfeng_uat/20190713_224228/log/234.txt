@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"id":6158,"code":"3","value":"服务站","type":0},{"id":6160,"code":"5","value":"经销商","type":0},{"id":6157,"code":"2","value":"车厂","type":0},{"id":6159,"code":"4","value":"运输企业","type":0}]}

@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":"4774","serviceCode":"1993","stationName":"南阳市龙港汽车服务有限公司","nameForshort":null,"address":null,"longitude":null,"latitude":null,"povince":"河南省","city":"南阳市","acceptPassType":"单一服务站","firstSyncTime":"2019-07-11 16:01:19"}]}}

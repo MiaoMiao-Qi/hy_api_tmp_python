@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"id":"6a510fdb7e134f7aad2d7e26c344dc02","areaId":null,"elecFenceName":"保定市神龙汽车贸易有限公司-9999","stationName":null,"serviceCode":null,"province":null,"city":null,"creator":null,"creatDate":null,"coordinate":null,"dataSn":null,"radius":null,"delFlag":null,"electTypeName":null}]}

@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"accountId":11031,"accountName":"TestA004","accountType":"服务站","jobType":"服务专员","accountLinktel":null,"lockAccount":"启用","lockAccountIndex":"0","expiredStatus":"正常","termVilidate":"2023-05-31","createAccount":"yuejianhui","accountDate":"2019-06-24 14:40:53","password":null}]}}

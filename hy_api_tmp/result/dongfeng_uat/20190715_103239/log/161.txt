@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":"4772","serviceCode":"1328","stationName":"龙岩市凡桥汽车服务有限公司","nameForshort":null,"address":null,"longitude":null,"latitude":null,"povince":"福建省","city":"龙岩市","acceptPassType":"4S功能店","firstSyncTime":"2019-07-11 16:01:19"}]}}

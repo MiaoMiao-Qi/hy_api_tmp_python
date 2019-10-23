@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"stationName":"承德市胜辉运输服务有限公司","longitude":"118.650893","latitude":"40.594888","serviceContent":"","partsContent":"","picture":null,"radius":100,"serviceRadius":null,"phone":"0314-2123097","serviceManager":null,"starLever":"0","commentCounts":0,"starLeverCounts":"0","adderss":"河北省承德市宽城满族自治县板城镇峡沟村","electronicFenceList":[]}}

@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"cid":120890,"businessName":"z-³µÖ÷","businessCode":"2222222222222222","addressCode":null,"linkPerson":null,"linkTelpone":null,"fax":"","addressCommon":null,"common":null,"certificateCode":null,"vehicleLicCode":null,"roadTransLicCode":null,"organizationCode":"","cType":2,"accountType":1,"accountId":11139,"ctype":2}}

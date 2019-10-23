@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"id":321,"dealerName":"未匹配经销商","lng":null,"lat":null,"dealerCode":null,"manageBrand":null,"district":"其他商代处","companyLinkman":null,"companyLinktel":null,"companyFax":null,"teamPicture":null,"enableRadius":30000,"lockRadius":20000,"dealerAddress":null,"phoneNum":null}}

@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"avgSpeed1":"0.0","tripTime1":"0.0","tripCount1":0,"brakingPercent1":"0.0","chassis1":"J8043724","terminalId1":null,"avgSpeed2":"0.0","tripTime2":"0.0","tripCount2":0,"brakingPercent2":"0.0","chassis2":"J8043721","terminalId2":"88888888886"}}

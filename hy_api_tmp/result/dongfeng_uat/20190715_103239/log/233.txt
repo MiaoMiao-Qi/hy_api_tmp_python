@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":177,"name":"nandouceshi","code":177,"createAccount":"dftest","roleType":"³µ³§","createTime":"2018-07-24 13:40:58","updateTime":null}]}}

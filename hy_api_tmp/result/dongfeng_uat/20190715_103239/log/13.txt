@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"id":4207,"code":"3","value":"SIM¿¨ºÅ","type":0},{"id":4208,"code":"4","value":"·Ö×éÃû","type":0},{"id":4205,"code":"1","value":"µ×ÅÌºÅ","type":0},{"id":4211,"code":"5","value":"ÖÕ¶ËIDºÅ","type":0},{"id":4206,"code":"2","value":"³µÅÆºÅ","type":0}]}

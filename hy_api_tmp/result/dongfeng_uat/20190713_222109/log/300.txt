@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"typeId":200130,"typeName":"F9"},{"typeId":200404,"typeName":"¶«·ç"},{"typeId":200999,"typeName":"Ïú´û"}]}

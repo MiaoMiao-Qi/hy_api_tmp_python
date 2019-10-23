@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":[{"id":1,"name":"首页","pid":0},{"id":2,"name":"统计报表","pid":0},{"id":3,"name":"系统管理","pid":0},{"id":4003,"name":"车辆管理","pid":3},{"id":4005,"name":"客户管理","pid":3}]}

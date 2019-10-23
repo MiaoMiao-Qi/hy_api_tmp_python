@@ -1,0 +1,1 @@
+{"resultCode":200,"message":"OK","data":{"id":277,"name":"auto","roleType":"3","permissions":[{"id":1,"name":"Ê×Ò³","pid":0}]}}
