@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"stationName":"邯郸市华沃汽车销售服务有限公司","longitude":"114.777773","latitude":"36.417837","serviceContent":"","partsContent":"","picture":null,"radius":100,"serviceRadius":null,"phone":"0272","serviceManager":null,"starLever":"0","commentCounts":0,"starLeverCounts":"0","adderss":"河北省邯郸市成安县漳河店镇北甘罗村","electronicFenceList":[]}}

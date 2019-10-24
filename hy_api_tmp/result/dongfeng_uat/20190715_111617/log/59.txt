@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"stationName":"天津市裕丰顺华汽车维修服务有限公司","longitude":"117.455007","latitude":"38.888197999999996","serviceContent":"","partsContent":"","picture":null,"radius":100,"serviceRadius":null,"phone":"022-88611051","serviceManager":null,"starLever":"0","commentCounts":0,"starLeverCounts":"0","adderss":"天津市津南区小站镇东西庄房","electronicFenceList":[]}}

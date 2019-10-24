@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":185,"name":"商品规划部","code":185,"createAccount":"dftest","roleType":"车厂","createTime":"2018-12-13 12:37:14","updateTime":null}]}}

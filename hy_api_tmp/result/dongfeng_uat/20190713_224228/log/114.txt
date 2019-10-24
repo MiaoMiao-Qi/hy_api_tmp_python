@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":[{"id":"880e75e1c7b444eca434dc23f2142533","areaId":null,"elecFenceName":"沈阳东贸汽车服务有限公司-1000","stationName":null,"serviceCode":null,"province":null,"city":null,"creator":null,"creatDate":null,"coordinate":null,"dataSn":null,"radius":null,"delFlag":null,"electTypeName":null}]}

@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":183,"name":"客户中心","code":183,"createAccount":"dftest","roleType":"车厂","createTime":"2018-08-15 16:24:55","updateTime":"2018-09-14 11:54:38"}]}}

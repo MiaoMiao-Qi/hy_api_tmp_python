@@ -1,1 +1,0 @@
-{"resultCode":650301,"message":"该销售区域下有子区域或者经销商，不可以进行删除","data":null}

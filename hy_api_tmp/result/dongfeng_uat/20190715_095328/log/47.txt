@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"gpsdate":"2019-06-26 15:04:28","velocity":"90.0","oil":"0.0","todaymileage":"0.00","accStatus":"ACC开,定位","direction":"0","doorStatus":"前门关,","alarm":"","lat":"32.712012","lng":"110.848131","rev":"500.0","carStauts":4,"fuel":1}}

@@ -1,0 +1,7 @@
+2019-10-23 16:25:23,761 - D:/pycharm/hy_api_tmp-python3/hy_api_tmp/run.py - main - 73 - [32mINFO - 当前配置项dongfengCAPP
+2019-10-23 16:25:23,762 - D:\pycharm\hy_api_tmp-python3\hy_api_tmp\login.py - login - 24 - [32mINFO - 用户登录成功,账号[18514570790] && 密码[123456]
+2019-10-23 16:25:23,864 - D:\pycharm\hy_api_tmp-python3\hy_api_tmp\login.py - login - 40 - [32mINFO - 登录接口返回的结果
+ {'resultCode': 200, 'message': 'OK', 'data': {'id': 146457, 'userId': '6a9d5869a7a34c389c87e45e631a9bb7', 'nickname': None, 'token': '/K+LmCBsGHJqslzc4JWSp5k5lyo='}}
+2019-10-23 16:25:23,872 - D:\pycharm\hy_api_tmp-python3\hy_api_tmp\case.py - run_case - 114 - [37mDEBUG - 
+ ## 接口index20 ##:	 http://clw.dfcv.com.cn:81/api/dongfeng/driver/myOrders?{"token":"/K+LmCBsGHJqslzc4JWSp5k5lyo=","userId":"7e2e3972f52e48a8bde86388f1639b79"}[0m
+2019-10-23 16:25:23,965 - D:\pycharm\hy_api_tmp-python3\hy_api_tmp\case.py - run_case - 158 - [32mINFO - [执行结果][Success]

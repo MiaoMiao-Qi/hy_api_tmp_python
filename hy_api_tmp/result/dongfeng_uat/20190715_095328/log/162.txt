@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"total":1,"page_total":1,"list":[{"id":"4771","serviceCode":"1151","stationName":"合肥东贸汽车销售服务有限公司","nameForshort":null,"address":null,"longitude":null,"latitude":null,"povince":"安徽省","city":"合肥市","acceptPassType":"4S功能店","firstSyncTime":"2019-07-11 16:01:19"}]}}

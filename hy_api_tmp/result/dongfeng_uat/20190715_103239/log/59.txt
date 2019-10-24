@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"stationName":"天津康顺源汽车销售有限公司","longitude":"117.46267599999999","latitude":"39.048539","serviceContent":"","partsContent":"","picture":null,"radius":100,"serviceRadius":null,"phone":"022-58501686","serviceManager":null,"starLever":"0","commentCounts":0,"starLeverCounts":"0","adderss":"天津市东丽区军粮城街道白房子","electronicFenceList":[]}}

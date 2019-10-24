@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"pagingInfo":{"total":0,"page_total":0,"list":[]},"oneStarCount":null,"twoStarCount":null,"threeStarCount":null,"fourStarCount":null,"fiveStarCount":null,"commentCount":0}}

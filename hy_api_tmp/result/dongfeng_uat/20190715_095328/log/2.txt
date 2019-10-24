@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"userId":11139,"username":"zhouzhou","password":"afdd0b4ad2ec172c586e2150770fbf9e","verycode":null,"email":null,"type":1,"jobType":0,"verycodetype":0,"token":"6ead328111e14ceeac2f37ceb2ba892f","accountImage":null,"terAuthority":1}}

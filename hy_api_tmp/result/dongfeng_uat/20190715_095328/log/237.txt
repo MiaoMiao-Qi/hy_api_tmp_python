@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":[{"id":4569,"code":"3","value":"服务站","type":0},{"id":4567,"code":"1","value":"系统管理员","type":0},{"id":4575,"code":"5","value":"经销商","type":0},{"id":4568,"code":"2","value":"车厂","type":0},{"id":4570,"code":"4","value":"运输企业","type":0}]}

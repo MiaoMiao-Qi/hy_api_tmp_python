@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"id":19,"chassisNum":"12345432","plateNum":"","carStauts":4,"lng":null,"lat":null,"gpstime":"2019-06-26 15:04:28","direction":0}}

@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":{"stationName":"阜平县捷运汽车销售服务有限公司","longitude":"114.624513","latitude":"38.749295","serviceContent":"","partsContent":"","picture":null,"radius":100,"serviceRadius":null,"phone":"0312-7227258","serviceManager":null,"starLever":"0","commentCounts":0,"starLeverCounts":"0","adderss":"河北省保定市曲阳县党城乡崔古庄村","electronicFenceList":[]}}

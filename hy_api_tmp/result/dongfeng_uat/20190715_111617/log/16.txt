@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":[{"id":207,"code":"0","value":"ÒÑ³ö¿â","type":0},{"id":208,"code":"1","value":"Î´³ö¿â","type":0}]}

@@ -1,1 +1,0 @@
-{"resultCode":200,"message":"OK","data":[{"id":"321","did":321,"pId":"318","name":"未匹配经销商(0/5045)","open":true,"isParent":true,"checked":false,"containElectroniFence":null,"online":0,"total":5045,"type":1},{"id":"2330","did":2330,"pId":"318","name":"湖南省经销商(0/0)","open":true,"isParent":true,"checked":false,"containElectroniFence":null,"online":0,"total":0,"type":1}]}
