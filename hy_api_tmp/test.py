@@ -73,7 +73,7 @@ class MedianFinder:
 """
 """
 author:jiyanjiao
-date :2019-10-21
+date :2019-10-22
 """
 
 
@@ -242,11 +242,57 @@ class Solution(object):
                 print(',', end=' ')
                 flag = total
         return count
- 
+
+
+class Solution:
+    def toLowerCase(self, str: str) -> str:
+        print(str.lower())
+        
+"""
+给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
+
+水平翻转图片就是将图片的每一行都进行翻转，即逆序。例如，水平翻转 [1, 1, 0] 的结果是 [0, 1, 1]。
+
+反转图片的意思是图片中的 0 全部被 1 替换， 1 全部被 0 替换。例如，反转 [0, 1, 1] 的结果是 [1, 0, 0]。
+
+示例 1:
+
+输入: [[1,1,0],[1,0,1],[0,0,0]]
+输出: [[1,0,0],[0,1,0],[1,1,1]]
+解释: 首先翻转每一行: [[0,1,1],[1,0,1],[0,0,0]]；
+     然后反转图片: [[1,0,0],[0,1,0],[1,1,1]]
+
+题目来源：力扣（LeetCode）
+"""
+"""
+@ author :Joyce ji
+@ date : 2019-10-25
+"""
+class Solution:
+    def flipAndInvertImage(self, A):
+        he_list = []    # 定义第一步反转每一行后的列表
+        reverse_list = []   # 定义第二步反转图片的列表
+        for i in range(len(A)):
+            he_list.append(A[i][::-1])
+        
+        # print(he_list)
+        for i in range(len(he_list)):
+            for j in range(len(he_list[i])):
+                if he_list[i][j] == 0:
+                    he_list[i][j] = 1
+                else:
+                    he_list[i][j] = 0
+            reverse_list.append(he_list[i])
+        # print(reverse_list)
+        return reverse_list
+    
     
 if __name__ == '__main__':
     s = Solution()
-    s.balancedStringSplit("RLRRLLRLRL")
+    A = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
+    s.flipAndInvertImage(A)
+    # s.toLowerCase("Hello")
+    # s.balancedStringSplit("RLRRLLRLRL")
     
     # obj = MedianFinder()
     # obj.addNum(1)
