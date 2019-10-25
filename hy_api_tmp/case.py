@@ -17,6 +17,7 @@ logger = LoggerUtil()
 
 class Excel:
     def __init__(self, path, cfg):
+        print('==========================='+path)
         if not os.path.exists(path):
             print('测试用例文件不存在！！！')
             sys.exit()
