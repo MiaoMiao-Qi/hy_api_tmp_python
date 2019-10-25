@@ -75,7 +75,7 @@ def main():
     # 执行单元测试
     test_runner = TestRunner(cfg, project_name, env)
     test_runner.run()
-    # test_runner.send_mail()
+    test_runner.send_mail()
 
 
 if __name__ == '__main__':
