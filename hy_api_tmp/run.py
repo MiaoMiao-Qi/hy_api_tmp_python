@@ -11,7 +11,7 @@ import time
 from LogUtils.logutil import LoggerUtil
 
 logger = LoggerUtil()
-os.sys.path.append("..")
+
 
 class TestRunner:
     def __init__(self, cfg, project_name, env):
