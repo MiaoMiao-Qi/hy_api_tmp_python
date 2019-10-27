@@ -23,6 +23,7 @@ class TestRunner:
             os.makedirs(self.dir_result)
 
     def run(self):
+        print("测试代码是否执行")
         # 先将token变量值写入字典
         const.var_dict["${token}"] = login.login(self.cfg)
 
