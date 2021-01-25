@@ -18,12 +18,12 @@ root_path = os.path.abspath(os.path.dirname(__file__))
 class TestRunner:
     def __init__(self, project_name, env):
         self.env = env
-        self.dir_case = root_path+"\\hy_api_tmp\\project\\{}.xls".format(project_name)
+        self.dir_case = root_path+"\\project\\{}.xls".format(project_name)
         self.dir_result = root_path+"\\project\\result/{}_{}/{}".format(project_name, env,
                                                                              time.strftime("%Y%m%d_%H%M%S"))
         if not os.path.isdir(self.dir_result):
             os.makedirs(self.dir_result)
-        self.dir_case_result = root_path+"\\project\\project/{}_result.xls".format(project_name)
+        self.dir_case_result = root_path+"\\project/{}_result.xls".format(project_name)
 
     def run(self):
         const.start_time_style = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
