@@ -7,7 +7,7 @@ class Config(object):
     读取配置文件函数
     """
     def __init__(self, file_name):
-        self.config = configparser.ConfigParser()
+        self.config = configparser.RawConfigParser() # configparser.ConfigParser()
         path = os.path.split(os.path.realpath(__file__))[0] + '/%s.conf' % file_name
         self.config.read(path, encoding='UTF-8')
         

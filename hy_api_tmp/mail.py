@@ -45,6 +45,7 @@ def send_mail(cfg, dir_result):
 def add_zip(dir_result):
     shutil.make_archive('report', 'zip', dir_result)
 
+
 def get_mail_content(dir_result):
     result_file = open("{}/api_testResult.html".format(dir_result)).read()
 
@@ -56,6 +57,7 @@ def get_mail_content(dir_result):
            "通过用例:  {} \n" \
            "失败用例:   {} \n\n" \
            "如需查看详细接口调用情况，请解压附件中的zip包进行查看，谢谢！" .format(total_num, pass_num, total_num-pass_num)
+
 
 if __name__ == '__main__':
     cfg = Config('config/{}'.format("cddy-test"))

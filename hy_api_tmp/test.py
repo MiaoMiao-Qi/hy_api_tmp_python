@@ -285,12 +285,17 @@ class Solution:
             reverse_list.append(he_list[i])
         # print(reverse_list)
         return reverse_list
-    
+ 
+import  sys
+def test():
+    s = sys.argv
+    print(s[0])
     
 if __name__ == '__main__':
-    s = Solution()
-    A = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
-    s.flipAndInvertImage(A)
+    test()
+    # s = Solution()
+    # A = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
+    # s.flipAndInvertImage(A)
     # s.toLowerCase("Hello")
     # s.balancedStringSplit("RLRRLLRLRL")
     
