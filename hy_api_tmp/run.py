@@ -12,7 +12,8 @@ import setting as info
 
 logger = LoggerUtil()
 
-
+root_path = os.path.abspath(os.path.dirname(__file__))
+print("根目录=====", root_path)
 class TestRunner:
     def __init__(self, project_name, env):
         self.env = env
