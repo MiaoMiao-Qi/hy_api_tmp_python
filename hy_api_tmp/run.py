@@ -13,11 +13,12 @@ import setting as info
 logger = LoggerUtil()
 
 root_path = os.path.abspath(os.path.dirname(__file__))
-print("根目录=====", root_path)
+
+
 class TestRunner:
     def __init__(self, project_name, env):
         self.env = env
-        self.dir_case = os.path.join(os.getcwd(), "project\\{}.xls".format(project_name))
+        self.dir_case = root_path+"project\\{}.xls".format(project_name)
         print("当前执行目录====",self.dir_case)
         self.dir_result = os.path.join(os.getcwd(), "result/{}_{}/{}".format(project_name, env,
                                                                              time.strftime("%Y%m%d_%H%M%S")))
