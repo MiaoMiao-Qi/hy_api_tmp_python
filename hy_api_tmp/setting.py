@@ -46,6 +46,4 @@ server = 'smtphz.qiye.163.com'
 title="Tboss销售可视化"
 project_name = "TBOSS"
 
-send_email = False
-
-
+send_email = True
