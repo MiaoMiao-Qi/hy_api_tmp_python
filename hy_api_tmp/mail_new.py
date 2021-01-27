@@ -430,7 +430,7 @@ color: white;box-shadow:1px 1px 1px silver">鱼快创领科技   自动化测试
         msgTEXT = MIMEText(htmlmsg, _subtype='html')
         main_msg.attach(msgTEXT)
 
-        with open("report.html", "w", encoding='utf-8') as f:
+        with open("report.html", "w") as f:
               f.write(htmlmsg)
               f.close()
         part_case_excel = MIMEApplication(open(path + r'\project\{}_result.xls'.format(info.project_name), 'rb').read())
