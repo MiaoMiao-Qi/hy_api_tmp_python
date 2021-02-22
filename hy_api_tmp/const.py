@@ -1,5 +1,6 @@
 import time
 import datetime
+from Utils.stringutil import StringUtil as util
 import random
 
 # 定义初始的关联参数列表
@@ -31,4 +32,7 @@ var_dict["${timestamp_now}"] = int(time.time())*1000
 var_dict["${HHHHH}"] = lastYear.strftime("%Y-%m-%d")
 var_dict["${random_num}"] = time.strftime("%H%M%S", time.localtime())
 var_dict["result_${random_num}"] = ''
+var_dict["${telephone}"] = util.random_phone_number(1)[0]
+
+
 

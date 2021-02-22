@@ -13,6 +13,7 @@ from xlutils.copy import copy
 import requests
 import random
 import const
+import time
 import setting as info
 from LogUtils.logutil import LoggerUtil
 logger = LoggerUtil()
@@ -191,6 +192,13 @@ class Case:
         self.result_value_mail = ""
         self.code = ""
         
+        # 失败时间段
+        self.fail_time = ""
+        # 响应时长
+        self.response_time = ""
+        # 实际入参
+        self.actual_params = ""
+        
     def replace_variable_in_params(self):
         # 如果参数中包含可变参数，从可变参数字典中读取并替换参数值
         # 替换域名，并取代理地址
@@ -198,6 +206,8 @@ class Case:
             self.host = info.host_qingdao
         elif "${host_huanyou}" in self.host:
             self.host = info.host_huanyou
+        elif "${host_yiqi}" in self.host:
+            self.host = info.host_yiqi
         # self.proxies = json.loads(info.proxies)
 
         # 用例表中含host字符串的url，也需要走代理，如轨迹文件下载地址pass
@@ -214,6 +224,8 @@ class Case:
                         return
                     else:
                         self.params = self.params.replace(keyword, str(const.var_dict[keyword]))
+                        self.params = ' '.join(self.params.split())
+            self.actual_params = self.params
 
         # 替换url中的可变参数
         elif "${" in self.url:
@@ -295,6 +307,7 @@ class Case:
                         self.result = 'Success'
                         break
                 if self.result != 'Success':
+                    self.fail_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
                     self.result = '响应结果不含：{}'.format(self.checkpoint)
 
         # logger.info("[执行结果][{}]".format(self.result))
@@ -306,6 +319,7 @@ class Case:
         else:
             ng += 1
             self.result_value = 'Fail'
+            
         angle_list = []
         angle_list.append(self.num)
         angle_list.append(self.purpose)
@@ -362,7 +376,13 @@ class Case:
                     response_js = value
                 # 将关联参数和数值存到dict中
                 if value is not None:
-                    const.var_dict[str(param[0])] = str(value)
+                    if param[0].find("-") != -1:
+                        const.var_dict[''.join(str(param[0]).split())] = str(value - 1)
+                    elif param[0].find("+") != -1:
+                        const.var_dict[''.join(str(param[0]).split())] = str(value + 1)
+                    else:
+                        const.var_dict[''.join(str(param[0]).split())] = str(value)
+                    # const.var_dict[str(param[0])] = str(value)
         pass
 
     def get_variable_in_params(self):

@@ -26,8 +26,11 @@ def login(username, password, method):
     :param method:
     :return:
     """
-    url = "{}faw/operate/login".format(info.host_qingdao)
+    if info.iterm == "qingdao":
+        url = "{}faw/operate/login".format(info.host_qingdao)
     # logger.info("用户登录成功,账号[{}] && 密码[{}]".format(username, password))
+    elif info.iterm == "yiqi":
+        url = "{}faw/yiqioperate/login".format(info.host_yiqi)
     
     if info.md5 == "true":
         password = hashlib.md5(password.encode('utf8')).hexdigest()

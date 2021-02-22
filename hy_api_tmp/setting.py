@@ -1,14 +1,42 @@
+# 环境 线上online  UAT环境uat 测试环境test
+env = "test"
 
-env = "uat"   # online uat
+# 项目名称 一汽项目 yiqi 青汽项目 qingdao 环游项目 huanyou
+iterm = "yiqi"
+
+# 报告名称 #"青岛_TBOSS_销售可视化_Main" "一汽_TBOSS_Sanity"
+title = "一汽_TBOSS_Sanity"
+
+# 接口用例excel名称 "TBOSS_qingdao_sale"  "TBOSS_yiqi"
+project_name = "TBOSS_yiqi"
+
+# 是否发送邮件 True发送邮件 False不发送邮件
+send_email = True
+
+# 结果是否回写到excel中 0结果全部回写 1只回写失败的接口
+write_back = 1
+
+
+# 用户名(青岛和一汽同名)
+username = "testInter"
+
+# 密码
+# password=Aa%13579
+password = "ehmL%2FsPnR5sKW3i7vSASzQ%3D%3D"
+md5 = "false"
 
 host_qingdao = ''
+host_yiqi = ''
 host_huanyou = ''
 
 # 青岛Tboss host地址
-test_host_qingdao = 'http://sy.aerozhonghuan.com:81/test/yiqi/'
+test_host_qingdao = 'http://sy.aerozhonghuan.com:81/test/yiqi/web/qdfaw/yiqiTbossParallel/#/home'
 uat_host_qingdao = 'https://uat-iov-ec.fawjiefang.com.cn/app/api/'
 test_proxies = '{"http": "http://211.145.49.132:81"}'
 
+# 一汽Tboss host地址
+test_host_yiqi = 'http://sy.aerozhonghuan.com:81/test/yiqi/app/api/'
+uat_host_yiqi = 'https://uat-iov-ec.fawjiefang.com.cn/app/api/'
 
 # 寰游 host地址
 test_host_huanyou = ""
@@ -30,20 +58,9 @@ uat_dm_host_changchun = "https://uat-iov-ec.fawjiefang.com.cn/app/api/"
 online_host = ''
 online_proxies = ''
 
-
-username = "testInter"
-# password=Aa%13579
-password = "ehmL%2FsPnR5sKW3i7vSASzQ%3D%3D"
-md5 = "false"
-
-
 """邮箱发送 配置"""
-Form= 'aototest@smartlink-tech.com.cn'
-pw='Aa20202020'
-To="jiyanjiao@smartlink-tech.com.cn"
-
+Form = 'aototest@smartlink-tech.com.cn'
+pw = 'Aa20202020'
 server = 'smtphz.qiye.163.com'
-title="Tboss销售可视化"
-project_name = "TBOSS"
-
-send_email = True
+To = "jiyanjiao@smartlink-tech.com.cn"
+# To = "jiyanjiao@smartlink-tech.com.cn,weijie@smartlink-tech.com.cn,wangqi@smartlink-tech.com.cn,houqingxuan@smartlink-tech.com.cn"

@@ -102,12 +102,18 @@ def get_variable_value_from_result(v, res):
 # v = '${fleetName}=[data][list][pmName:测试151314][id]'
 # v = '${fleetName}=[data][list][random@5][id]'
 # get_variable_value_from_result(v, res)
-r1 = '"resultCode":507'
+# r1 = '"resultCode":507'
+#
+# r = '"message":"车系+车辆大类+驱动形式 与已有规则重复！"'
+# r = '"message":"车系+车辆大类+驱动形式与已有规则重复！"'
+# rs = '{"resultCode":507,"message":"车系+车辆大类+驱动形式 与已有规则重复！","data":null}'
+# if ''.strip(r) in rs:
+#     print("true")
+# else:
+#     print("f")
 
-r = '"message":"车系+车辆大类+驱动形式 与已有规则重复！"'
-r = '"message":"车系+车辆大类+驱动形式与已有规则重复！"'
-rs = '{"resultCode":507,"message":"车系+车辆大类+驱动形式 与已有规则重复！","data":null}'
-if ''.strip(r) in rs:
-    print("true")
-else:
-    print("f")
+s = 'moveId=653&moveToId=${id-1}&token=73c423d2663c499fafe485d363c57a20'
+r = ' ${id-1}' ' ${id-1}'
+print(r)
+r = ' '.join(r.split())
+print(r)

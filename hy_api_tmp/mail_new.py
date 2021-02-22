@@ -430,11 +430,12 @@ color: white;box-shadow:1px 1px 1px silver">鱼快创领科技   自动化测试
         msgTEXT = MIMEText(htmlmsg, _subtype='html')
         main_msg.attach(msgTEXT)
 
-        with open("report.html", "w") as f:
+        # with open("report.html", "w", encoding="UTF-8") as f:
+        with open("report.html", "w", errors='ignore') as f:
               f.write(htmlmsg)
               f.close()
         part_case_excel = MIMEApplication(open(path + r'\project\{}_result.xls'.format(info.project_name), 'rb').read())
-        part_case_excel.add_header('Content-Disposition', 'attachment', filename="接口用例.xls")
+        part_case_excel.add_header('Content-Disposition', 'attachment', filename="接口用例详情.xls")
         main_msg.attach(part_case_excel)
         part = MIMEApplication(open('report.html', 'rb').read())
         part.add_header('Content-Disposition', 'attachment', filename="report.html")
