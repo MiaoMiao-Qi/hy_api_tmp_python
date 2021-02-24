@@ -17,7 +17,7 @@ class StringUtil:
         end = '0123456789'
         for i in range(n):
             number_list.append(random.choice(prelist) + ''.join(random.sample(end, 8)))
-        print(number_list)
+        # print(number_list)
         return number_list
        
     @staticmethod
@@ -42,11 +42,11 @@ class StringUtil:
                 j += 1
             str_list.append(''.join(strs))
             i += 1
-        print(str_list)
         return str_list
 
         
 if __name__ == '__main__':
     s = StringUtil()
-    # s.random_phone_number(2)
-    s.random_chinese_str(5, 1)
+    l = s.random_phone_number(1)
+    print(l[0])
+    # s.random_chinese_str(5, 1)

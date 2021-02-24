@@ -8,6 +8,7 @@ from email.mime.application import MIMEApplication
 import setting as info
 import case as case
 import img as img
+import time
 from pyecharts import options as opts
 from pyecharts.charts import Bar
 from pyecharts.commons.utils import JsCode
@@ -50,31 +51,31 @@ class CreatMail():
               for i in range(0, len(case.case_list)):
                   if case.case_list[i][4]=="Success":
                       msg = """
-            <div style="width:936px;height: auto; display: flex; "id="table_tr">
-                <span style="width: 40px;height: auto;line-height: 25px; display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 217px;height: auto;line-height: 25px; display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 300px;height: auto; overflow:hidden;  white-space:pre-wrap; line-height: 25px;display:flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 112px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 50px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <div style="width: 40px;height: auto;line-height: 25px;display: flex;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;overflow:hidden" title={}>查看</div>
+            <div style="width:936px;height: auto;" id="table_tr">
+                <span style="width: 40px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 217px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 300px;height: auto; overflow:hidden;  white-space:pre-wrap; line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 112px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 50px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <div style="width: 40px;height: auto;line-height: 25px;display: block;float: left;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;overflow:hidden" title={}>查看</div>
             </div>
     """.format(case.case_list[i][0],case.case_list[i][1],case.case_list[i][2],case.case_list[i][3],
                case.case_list[i][6],case.case_list[i][5],case.case_list[i][4],case.case_list[i][7],case.case_list[i][8])
                   else:
                       msg = """
-         <div style="width: 936px;height: auto;border-bottom: 1px solid #EFEFEF;line-height: 25px;background:linear-gradient(0deg, #fea079, #FFE4B5, transparent);overflow:hidden; display: flex;" id="table_tr">
-                <span style="width: 40px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 217px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 300px;height: auto;overflow:hidden;  white-space:pre-wrap; line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 112px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 50px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <span style="width: 45px;height: auto;line-height: 25px;display: flex;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;">{}</span>
-                <div style="width: 40px;height: auto;line-height: 25px;display: flex;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;align-items: center; justify-content: center;overflow:hidden" title={}>查看</div>
+            <div style="width: 936px;height: auto;border-bottom: 1px solid #EFEFEF;line-height: 25px;background:linear-gradient(0deg, #fea079, #FFE4B5, transparent);overflow:hidden" id="table_tr">
+                <span style="width: 40px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 217px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 300px;height: auto;overflow:hidden;  white-space:pre-wrap; line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 112px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 50px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <span style="width: 45px;height: auto;line-height: 25px;display: block;float: left;border-right: 1px solid #EFEFEF;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;">{}</span>
+                <div style="width: 40px;height: auto;line-height: 25px;display: block;float: left;font-family:'微软雅黑';border-bottom: 1px solid #EFEFEF;overflow:hidden" title={}>查看</div>
             </div>
     """.format(case.case_list[i][0],case.case_list[i][1],case.case_list[i][2],case.case_list[i][3],
                case.case_list[i][6],case.case_list[i][5],case.case_list[i][4],case.case_list[i][7],case.case_list[i][8])
@@ -302,7 +303,6 @@ class CreatMail():
 
         mmsg = self.casehtml_assert()
         mmsg1 = self.casehtml_assert2(newlist3)
-        # noinspection PyStringFormat
         htmlmsg = '''
         <html lang="en">
 <head>
@@ -422,12 +422,12 @@ class CreatMail():
 <!--页面底部导航-->
 <div style="width:955px;height: 20px;background:#009ACD;;margin-left: 4%;text-align: center;margin-top:20px;line-height: 20px;
 color: white;box-shadow:1px 1px 1px silver">鱼快创领科技   自动化测试</div>
+
 </body>
 </html> 
         '''.format(img.header_img,info.title,img.right_jt,img.button,img.title_bg,iconData2[1],tgl_success,len(new_list_remove_dup),self.success_tgl,xm_count,const.start_time_style,
                    const.end_time_style,
                    const.total_time,img.right_jt,img.button,iconData[1],img.right_jt,img.button,mmsg1,img.right_jt,img.button,mmsg)
-        
         msgTEXT = MIMEText(htmlmsg, _subtype='html')
         main_msg.attach(msgTEXT)
 

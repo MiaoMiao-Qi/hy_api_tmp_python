@@ -1,7 +1,6 @@
 import time
 import datetime
 from Utils.stringutil import StringUtil as util
-import random
 
 # 定义初始的关联参数列表
 var_dict = dict()

@@ -1,6 +1,7 @@
 # coding: utf-8
 # Purpose：接口自动化测试
-# Author：Joyce
+# Author：Jiyanjiao(Joyce)
+# Date: 2020
 # 参考Blog：http://www.bstester.com/2015/08/interface-test-automation-scheme-details
 
 import json
@@ -42,7 +43,10 @@ class Excel:
         self.new_path = new_path
         
     def get_cases(self):
-        # 读取excel中每一行的值
+        """
+        读取excel中每一行的值
+        :return:
+        """
         for line in range(1, self.api_sheet.nrows):
             case = Case()
             case.line = line
@@ -59,7 +63,7 @@ class Excel:
             case.va_in_para = self.api_sheet.cell(line, 9).value.replace('\n', '').replace('\r', '')
             case.test_env = self.api_sheet.cell(line, 10).value.replace('\n', '').replace('\r', '')
             case.uat_env = self.api_sheet.cell(line, 11).value.replace('\n', '').replace('\r', '')
-            case.active_online = self.api_sheet.cell(line, 12).value.replace('\n', '').replace('\r', '')
+            case.online_env = self.api_sheet.cell(line, 12).value.replace('\n', '').replace('\r', '')
             self.cases.append(case)
             if case.va_in_para:
                 Excel.ROW_G = line
@@ -208,6 +212,7 @@ class Case:
             self.host = info.host_huanyou
         elif "${host_yiqi}" in self.host:
             self.host = info.host_yiqi
+            
         # self.proxies = json.loads(info.proxies)
 
         # 用例表中含host字符串的url，也需要走代理，如轨迹文件下载地址pass

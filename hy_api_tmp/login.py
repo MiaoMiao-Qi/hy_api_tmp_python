@@ -8,7 +8,6 @@ import setting as info
 from LogUtils.logutil import LoggerUtil
 logger = LoggerUtil()
 
-
 def getVerifyCodeId():
     str = []
     arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
@@ -21,10 +20,10 @@ def getVerifyCodeId():
 def login(username, password, method):
     """
     获取token的方法
-    :param username:
-    :param password:
-    :param method:
-    :return:
+    :param username: 账号
+    :param password: 密码
+    :param method: 请求方式
+    :return: token值
     """
     if info.iterm == "qingdao":
         url = "{}faw/operate/login".format(info.host_qingdao)

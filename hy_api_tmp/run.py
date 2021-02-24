@@ -29,9 +29,13 @@ class TestRunner:
     def run(self):
         const.start_time_style = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
         const.start_time = datetime.datetime.now()
-        
-        # 先将token变量值写入字典
-        const.var_dict["${token}"] = login.login(info.username, info.password, "GET")
+        if self.env.lower() == "online" and info.iterm == "yiqi":
+            # 先将token变量值写入字典
+            const.var_dict["${token}"] = login.login(info.username_online_yiqi, info.password_online_yiqi, "GET")
+        elif self.env.lower() == "online" and info.iterm == "qingdao":
+            const.var_dict["${token}"] = login.login(info.username_online_qingdao, info.password_online_qingdao, "GET")
+        else:
+            const.var_dict["${token}"] = login.login(info.username, info.password, "GET")
 
         excel = Excel(self.dir_case, self.dir_case_result)
        # html_report = htmlGenerator.report(self.dir_result)
@@ -97,7 +101,7 @@ class TestRunner:
                 
             # online 环境，Test一列，为No时不予执行
             if self.env.lower() == "online":
-                if case.test_env == 'No':
+                if case.online_env == 'No':
                     continue
                 case.run_case()
                 if info.write_back == 0:
@@ -147,7 +151,7 @@ def main():
         info.host_yiqi = info.uat_host_yiqi
         info.proxies = info.uat_proxies
     elif env == "online":
-        info.host = info.online_host
+        info.host_yiqi = info.online_host_yiqi
         info.proxies = info.online_proxies
         
     # 执行单元测试
