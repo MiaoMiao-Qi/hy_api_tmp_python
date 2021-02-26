@@ -449,25 +449,45 @@ color: white;box-shadow:1px 1px 1px silver">鱼快创领科技   自动化测试
         if info.env != 'online':
             if info.send_email:
                 server.sendmail(Ta, To, fullText)
+                print("通过：%s,失败：%s，已发送测试报告到邮箱" % (case.ok, case.ng))
         else:
-            if case.ng > 0 and info.send_email:
+            if case.ng >= 0 and info.send_email:
                 server.sendmail(Ta, To, fullText)
+                print("通过：%s,失败：%s，已发送测试报告到邮箱" % (case.ok, case.ng))
         server.quit()
 
     def SendMail(self):
         try:
             self.CreatBody()
-            print("通过：%s,失败：%s，已发送测试报告到邮箱"%(case.ok,case.ng))
 
         except Exception as e:
             print(" 测试报告发送失败", e)
-
-
+    
 def SendReport():
         report = CreatMail()
         report.SendMail()
+        
+        
+def SendLongin_fail_mail(content):
+    try:
+        Ta = info.Form
+        Tb = info.pw
+        Td = info.server
+        To = info.To.split(',')
+        strTo = ' '.join(To)
+        server = smtplib.SMTP_SSL(Td)
+        server.login(Ta, Tb)
+        
+        message = MIMEText(content, 'plain', 'utf-8')
+        message['From'] = formataddr(['自动化测试部', Ta])
+        message['To'] = strTo
+        message['Subject'] = '💥警报!【{}环境】'.format(info.env.upper()) + info.title + "登录接口发生异常"
+        server.sendmail(Ta, To, message.as_string())
+    except Exception as e:
+        print(" 测试报告发送失败", e)
 
 if __name__ == '__main__':
-    SendReport()
-    # test=CreatWeChat()
+    # SendReport()
+    test = CreatMail()
     # test.creathtml()
+    test.SendLongin_fail_mail("登录接口出现异常")

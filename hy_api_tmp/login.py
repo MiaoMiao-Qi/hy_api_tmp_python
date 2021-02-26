@@ -5,6 +5,7 @@ import random
 
 import hashlib
 import setting as info
+import mail_new as ma
 from LogUtils.logutil import LoggerUtil
 logger = LoggerUtil()
 
@@ -55,7 +56,14 @@ def login(username, password, method):
         logger.info("登录接口返回的结果\n {}".format(result))
         return result["data"]["token"]
     except Exception as e:
+        content = "登录接口出现异常\n" \
+                  "接口url : {}\n" \
+                  "请求方式 : {}\n" \
+                  "请求入参 : {}\n" \
+                  "响应结果 : {}\n".format(url, method, data, result)
+        ma.SendLongin_fail_mail(content)
         print("登陆接口出现异常", e)
+        raise
 
 
 def logout(cfg, token):

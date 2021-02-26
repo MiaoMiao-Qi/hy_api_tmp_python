@@ -5,13 +5,13 @@ env = "online"
 iterm = "yiqi"
 
 # 报告名称 #"青岛_TBOSS_销售可视化_Main" "一汽_TBOSS_Sanity" "一汽_TBOSS_Sanity线上"
-title = "一汽_TBOSS_Sanity"
+title = "一汽_TBOSS_Sanity线上"
 
 # 接口用例excel名称 "TBOSS_qingdao_sale"  "TBOSS_yiqi" 线上环境 TBOSS_yiqi_online
 project_name = "TBOSS_yiqi_online"
 
 # 是否发送邮件 True发送邮件 False不发送邮件
-send_email = False
+send_email = True
 
 # 结果是否回写到excel中 0结果全部回写 1只回写失败的接口
 write_back = 1
