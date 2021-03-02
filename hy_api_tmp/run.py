@@ -152,6 +152,7 @@ def main():
         info.proxies = info.uat_proxies
     elif env == "online":
         info.host_yiqi = info.online_host_yiqi
+        info.host_qingdao = info.online_host_qingdao
         info.proxies = info.online_proxies
         
     # 执行单元测试
