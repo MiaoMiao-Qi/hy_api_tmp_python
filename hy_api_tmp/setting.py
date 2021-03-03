@@ -69,5 +69,5 @@ online_proxies = ''
 Form = 'aototest@smartlink-tech.com.cn'
 pw = 'Aa20202020'
 server = 'smtphz.qiye.163.com'
-To = "jiyanjiao@smartlink-tech.com.cn"
-# To = "jiyanjiao@smartlink-tech.com.cn,weijie@smartlink-tech.com.cn,wangqi@smartlink-tech.com.cn,houqingxuan@smartlink-tech.com.cn"
+# To = "jiyanjiao@smartlink-tech.com.cn"
+To = "jiyanjiao@smartlink-tech.com.cn,weijie@smartlink-tech.com.cn,wangqi@smartlink-tech.com.cn,houqingxuan@smartlink-tech.com.cn"
