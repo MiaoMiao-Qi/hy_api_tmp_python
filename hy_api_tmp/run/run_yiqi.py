@@ -1,6 +1,5 @@
 # coding: utf-8
 from case import Excel
-import sys
 import os
 import login
 import mail_new
@@ -9,10 +8,12 @@ import time
 import datetime
 from LogUtils.logutil import LoggerUtil
 import setting as info
+# import config.config_qingdao as y_con
+import config.config_yiqi as y_con
 
 logger = LoggerUtil()
 
-root_path = os.path.abspath(os.path.dirname(__file__))
+root_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
 class TestRunner:
@@ -29,13 +30,18 @@ class TestRunner:
     def run(self):
         const.start_time_style = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
         const.start_time = datetime.datetime.now()
+        # if self.env.lower() == "online" and info.iterm == "yiqi":
+        #     # 先将token变量值写入字典
+        #     const.var_dict["${token}"] = login.login(y_con.username_online_yiqi, y_con.password_online_yiqi, "GET")
+        # elif self.env.lower() == "online" and info.iterm == "qingdao":
+        #     const.var_dict["${token}"] = login.login(y_con.username_online_qingdao, y_con.password_online_qingdao, "GET")
+        # else:
+        #     const.var_dict["${token}"] = login.login(y_con.username, y_con.password, "GET")
+        
         if self.env.lower() == "online" and info.iterm == "yiqi":
-            # 先将token变量值写入字典
-            const.var_dict["${token}"] = login.login(info.username_online_yiqi, info.password_online_yiqi, "GET")
-        elif self.env.lower() == "online" and info.iterm == "qingdao":
-            const.var_dict["${token}"] = login.login(info.username_online_qingdao, info.password_online_qingdao, "GET")
+            const.var_dict["${token}"] = login.login(y_con.username_online_yiqi, y_con.password_online_yiqi, "GET")
         else:
-            const.var_dict["${token}"] = login.login(info.username, info.password, "GET")
+            const.var_dict["${token}"] = login.login(y_con.username, y_con.password, "GET")
 
         excel = Excel(self.dir_case, self.dir_case_result)
        # html_report = htmlGenerator.report(self.dir_result)
@@ -138,21 +144,30 @@ class TestRunner:
 
         
 def main():
+    info.project_name = y_con.project_name
     project_name = info.project_name
+    
+    info.env = y_con.env
     env = info.env.lower()
+    
+    info.title = y_con.title
+    info.iterm = y_con.iterm
+    
+    info.Form = y_con.Form
+    info.pw = y_con.pw
+    info.server = y_con.server
+    info.To = y_con.To
+    
+    
     if env == "test":
-        info.host_qingdao = info.test_host_qingdao
         info.host_huanyou = info.test_host_huanyou
-        info.host_yiqi = info.test_host_yiqi
-        info.proxies = info.test_proxies
+        info.host_yiqi = y_con.test_host_yiqi
     elif env == "uat":
-        info.host_qingdao = info.uat_host_qingdao
         info.host_huanyou = info.uat_host_huanyou
-        info.host_yiqi = info.uat_host_yiqi
+        info.host_yiqi = y_con.uat_host_yiqi
         info.proxies = info.uat_proxies
     elif env == "online":
-        info.host_yiqi = info.online_host_yiqi
-        info.host_qingdao = info.online_host_qingdao
+        info.host_yiqi = y_con.online_host_yiqi
         info.proxies = info.online_proxies
         
     # 执行单元测试
