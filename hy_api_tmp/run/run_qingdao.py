@@ -1,10 +1,11 @@
 # coding: utf-8
-import sys
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(BASE_DIR)
+import sys, os
+
+Base_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(Base_DIR)
 
 from case import Excel
+
 import login
 import mail_new
 import const
