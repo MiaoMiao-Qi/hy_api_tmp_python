@@ -152,19 +152,33 @@ class TestRunner:
 
         
 def main():
+    # info.project_name = q_con.project_name
+    # project_name = info.project_name
+    #
+    # info.env = q_con.env
+    # env = info.env.lower()
+    #
+    # info.title = q_con.title
+    # info.iterm = q_con.iterm
+    #
+    # info.Form = q_con.Form
+    # info.pw = q_con.pw
+    # info.server = q_con.server
+    # info.To = q_con.To
+
     info.project_name = os.environ["excel_name"]  # q_con.project_name
     project_name = info.project_name
 
-    info.env = os.environ["host_environment"]    # q_con.env
+    info.env = os.environ["host_environment"]  # q_con.env
     env = info.env.lower()
-    
-    info.title = os.environ["report_title"]   # q_con.title
+
+    info.title = os.environ["report_title"]  # q_con.title
     info.iterm = q_con.iterm
 
     info.Form = q_con.Form
     info.pw = q_con.pw
-    info.server = os.environ["mail_receiver"]      # q_con.server
-    info.To = q_con.To
+    info.server = q_con.server
+    info.To = os.environ["mail_receiver"]    # q_con.To
     
     if env == "test":
         info.host_qingdao = q_con.test_host_qingdao
