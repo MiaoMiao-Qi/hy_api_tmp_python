@@ -1,4 +1,5 @@
 # coding: utf-8
+# !/usr/bin/python3
 import sys, os
 
 Base_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -151,18 +152,18 @@ class TestRunner:
 
         
 def main():
-    info.project_name = q_con.project_name
+    info.project_name = os.environ["excel_name"]  # q_con.project_name
     project_name = info.project_name
 
-    info.env = q_con.env
+    info.env = os.environ["host_environment"]    # q_con.env
     env = info.env.lower()
     
-    info.title = q_con.title
+    info.title = os.environ["report_title"]   # q_con.title
     info.iterm = q_con.iterm
 
     info.Form = q_con.Form
     info.pw = q_con.pw
-    info.server = q_con.server
+    info.server = os.environ["mail_receiver"]      # q_con.server
     info.To = q_con.To
     
     if env == "test":
