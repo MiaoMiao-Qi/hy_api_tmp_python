@@ -1,13 +1,10 @@
 # coding: utf-8
 import sys
-print ("测试====", sys.path)
-sys.path.append("D:\\pycharm\\hy_api_tmp-python3\\hy_api_tmp\\run")
-sys.path.append("D:\\python\\lib\\site-packages")
-sys.path.append("D:\\python\\lib")
-sys.path.append("D:\\pycharm\\hy_api_tmp-python3\\hy_api_tmp")
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(BASE_DIR)
 
 from case import Excel
-import os
 import login
 import mail_new
 import const
