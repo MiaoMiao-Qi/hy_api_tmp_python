@@ -1,5 +1,11 @@
 # coding: utf-8
-print("duquwenjianla---------------11111111111")
+import sys
+print ("测试====", sys.path)
+sys.path.append("D:\\pycharm\\hy_api_tmp-python3\\hy_api_tmp\\run")
+sys.path.append("D:\\python\\lib\\site-packages")
+sys.path.append("D:\\python\\lib")
+sys.path.append("D:\\pycharm\\hy_api_tmp-python3\\hy_api_tmp")
+
 from case import Excel
 import os
 import login
