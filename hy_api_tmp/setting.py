@@ -11,7 +11,7 @@ title = ""
 project_name = ""
 
 # 是否发送邮件 True发送邮件 False不发送邮件
-send_email = True
+send_email = ''
 
 # 结果是否回写到excel中 0结果全部回写 1只回写失败的接口
 write_back = 0

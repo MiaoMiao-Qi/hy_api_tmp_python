@@ -157,7 +157,7 @@ def main():
     info.pw = y_con.pw
     info.server = y_con.server
     info.To = y_con.To
-    
+    info.send_email = y_con.send_email
     
     if env == "test":
         info.host_huanyou = info.test_host_huanyou

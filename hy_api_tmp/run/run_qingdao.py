@@ -49,8 +49,6 @@ class TestRunner:
         else:
             const.var_dict["${token}"] = login.login(q_con.username, q_con.password, "GET")
         
-        
-
         excel = Excel(self.dir_case, self.dir_case_result)
        # html_report = htmlGenerator.report(self.dir_result)
         cases = excel.get_cases()
@@ -112,7 +110,6 @@ class TestRunner:
                             index += 1
                     excel.save_excel()
                 
-                
             # online 环境，Test一列，为No时不予执行
             if self.env.lower() == "online":
                 if case.online_env == 'No':
@@ -165,11 +162,12 @@ def main():
     # info.pw = q_con.pw
     # info.server = q_con.server
     # info.To = q_con.To
+    # info.send_email = q_con.send_email
 
     info.project_name = os.environ["excel_name"]  # q_con.project_name
     project_name = info.project_name
 
-    info.env = os.environ["host_environment"]  # q_con.env
+    info.env = os.environ["run_environment"]  # q_con.env
     env = info.env.lower()
 
     info.title = os.environ["report_title"]  # q_con.title
@@ -179,6 +177,7 @@ def main():
     info.pw = q_con.pw
     info.server = q_con.server
     info.To = os.environ["mail_receiver"]    # q_con.To
+    info.send_email = os.environ["send_mail"]  # q_con.send_email
     
     if env == "test":
         info.host_qingdao = q_con.test_host_qingdao
