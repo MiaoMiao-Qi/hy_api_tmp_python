@@ -1,6 +1,9 @@
 # coding: utf-8
+import os, sys
+Base_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(Base_DIR)
+
 from case import Excel
-import os
 import login
 import mail_new
 import const
@@ -144,21 +147,36 @@ class TestRunner:
 
         
 def main():
-    info.project_name = y_con.project_name
+    # info.project_name = y_con.project_name
+    # project_name = info.project_name
+    #
+    # info.env = y_con.env
+    # env = info.env.lower()
+    #
+    # info.title = y_con.title
+    # info.iterm = y_con.iterm
+    #
+    # info.Form = y_con.Form
+    # info.pw = y_con.pw
+    # info.server = y_con.server
+    # info.To = y_con.To
+    # info.send_email = y_con.send_email
+
+    info.project_name = os.environ["excel_name"]
     project_name = info.project_name
-    
-    info.env = y_con.env
+
+    info.env = os.environ["run_environment"]
     env = info.env.lower()
-    
-    info.title = y_con.title
+
+    info.title = os.environ["report_title"]
     info.iterm = y_con.iterm
-    
+
     info.Form = y_con.Form
     info.pw = y_con.pw
     info.server = y_con.server
-    info.To = y_con.To
-    info.send_email = y_con.send_email
-    
+    info.To = os.environ["mail_receiver"]
+    info.send_email = os.environ["send_mail"]
+
     if env == "test":
         info.host_huanyou = info.test_host_huanyou
         info.host_yiqi = y_con.test_host_yiqi
