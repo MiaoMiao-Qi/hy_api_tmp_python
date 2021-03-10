@@ -1,0 +1,2 @@
+2021-03-10 14:52:15,098 - D:\hy_api_tmp-python3\hy_api_tmp\login.py - login - 56 - [32mINFO - 登录接口返回的结果
+ {'resultCode': 200, 'data': {'userName': 'testInter', 'userId': '4e1c20a6a48743e3b0ce296c9d46448e', 'token': '1da872b3f95d47e6b8700152dbafca27'}}
