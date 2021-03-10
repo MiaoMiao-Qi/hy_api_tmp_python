@@ -52,7 +52,7 @@ class TestRunner:
         for case in cases:
             # UAT环境，UAT一列，为No时不予执行
             if self.env.lower() == "uat":
-                if case.uat_env == 'No':
+                if case.uat_env != 'Yes':
                     continue
 
                 case.run_case()
@@ -82,7 +82,7 @@ class TestRunner:
             
             # Test环境，Test一列，为No时不予执行
             if self.env.lower() == "test":
-                if case.test_env == 'No':
+                if case.test_env != 'Yes':
                     continue
                 case.run_case()
                 if info.write_back == 0:
@@ -110,7 +110,7 @@ class TestRunner:
                 
             # online 环境，Test一列，为No时不予执行
             if self.env.lower() == "online":
-                if case.online_env == 'No':
+                if case.online_env != 'Yes':
                     continue
                 case.run_case()
                 if info.write_back == 0:

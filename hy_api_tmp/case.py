@@ -277,6 +277,7 @@ class Case:
                 self.entire_url = self.host + self.url
             elif self.method == 'GET':
                 self.response = requests.get(self.entire_url)
+                print("响应结果为:=======", self.response)
                 # self.response = requests.get(self.entire_url, proxies=self.proxies)
             elif self.method == 'JSON':
                 headers = {'Accept': 'application/json, text/plain, */*',

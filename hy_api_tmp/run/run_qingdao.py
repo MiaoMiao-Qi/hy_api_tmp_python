@@ -6,7 +6,6 @@ Base_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(Base_DIR)
 
 from case import Excel
-
 import login
 import mail_new
 import const
@@ -55,7 +54,7 @@ class TestRunner:
         for case in cases:
             # UAT环境，UAT一列，为No时不予执行
             if self.env.lower() == "uat":
-                if case.uat_env == 'No':
+                if case.uat_env != 'Yes':
                     continue
 
                 case.run_case()
@@ -85,7 +84,7 @@ class TestRunner:
             
             # Test环境，Test一列，为No时不予执行
             if self.env.lower() == "test":
-                if case.test_env == 'No':
+                if case.test_env != 'Yes':
                     continue
                 case.run_case()
                 if info.write_back == 0:
@@ -112,7 +111,7 @@ class TestRunner:
                 
             # online 环境，Test一列，为No时不予执行
             if self.env.lower() == "online":
-                if case.online_env == 'No':
+                if case.online_env != 'Yes':
                     continue
                 case.run_case()
                 if info.write_back == 0:
@@ -149,35 +148,35 @@ class TestRunner:
 
         
 def main():
-    # info.project_name = q_con.project_name
-    # project_name = info.project_name
-    #
-    # info.env = q_con.env
-    # env = info.env.lower()
-    #
-    # info.title = q_con.title
-    # info.iterm = q_con.iterm
-    #
-    # info.Form = q_con.Form
-    # info.pw = q_con.pw
-    # info.server = q_con.server
-    # info.To = q_con.To
-    # info.send_email = q_con.send_email
-
-    info.project_name = os.environ["excel_name"]  # q_con.project_name
+    info.project_name = q_con.project_name
     project_name = info.project_name
 
-    info.env = os.environ["run_environment"]  # q_con.env
+    info.env = q_con.env
     env = info.env.lower()
 
-    info.title = os.environ["report_title"]  # q_con.title
+    info.title = q_con.title
     info.iterm = q_con.iterm
 
     info.Form = q_con.Form
     info.pw = q_con.pw
     info.server = q_con.server
-    info.To = os.environ["mail_receiver"]    # q_con.To
-    info.send_email = os.environ["send_mail"]  # q_con.send_email
+    info.To = q_con.To
+    info.send_email = q_con.send_email
+
+    # info.project_name = os.environ["excel_name"]  # q_con.project_name
+    # project_name = info.project_name
+    #
+    # info.env = os.environ["run_environment"]  # q_con.env
+    # env = info.env.lower()
+    #
+    # info.title = os.environ["report_title"]  # q_con.title
+    # info.iterm = q_con.iterm
+    #
+    # info.Form = q_con.Form
+    # info.pw = q_con.pw
+    # info.server = q_con.server
+    # info.To = os.environ["mail_receiver"]    # q_con.To
+    # info.send_email = os.environ["send_mail"]  # q_con.send_email
     
     if env == "test":
         info.host_qingdao = q_con.test_host_qingdao
